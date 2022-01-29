@@ -12,7 +12,7 @@
             <MenuItem Header="Удалить" Click="DeleteWorker"/>
         </ContextMenu>
     </Window.Resources>
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition />
@@ -21,42 +21,41 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Menu Grid.ColumnSpan="2">
+        <Menu Grid.ColumnSpan="2" Background="ForestGreen">
             <MenuItem Header="Справочники">
                 <MenuItem Header="Специальности" Click="OpenSpecials"/>
                 <MenuItem Header="Регионы" Click="OpenRegions"/>
                 <MenuItem Header="Олени" Click="OpenDeers"/>
             </MenuItem>
         </Menu>
-        <ListBox Grid.Row="1" SelectedItem="{Binding SelectedWorker}"
-                 ItemsSource="{Binding Worker}" 
+        <ListBox Grid.Row="1" SelectedItem="{Binding SelectedWorker}"  Background="WhiteSmoke"
+        ItemsSource="{Binding Worker}" 
                  DisplayMemberPath="LastName" 
-                 ContextMenu="{StaticResource listMenu}"
-                 />
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+                 ContextMenu="{StaticResource listMenu}"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" Background="ForestGreen">
             <StackPanel 
                 DataContext="{Binding SelectedWorker}"
                 Orientation="Vertical">
-                <Label Content="Имя"/>
-                <TextBox Text="{Binding FirstName}"/>
-                <Label Content="Отчество"/>
-                <TextBox Text="{Binding Patronymic}"/>
-                <Label Content="Фамилия"/>
-                <TextBox Text="{Binding LastName}"/>
-                <Label Content="Номер телефона"/>
-                <TextBox Text="{Binding Namber}"/>
-                <Label Content="Дата рождения"/>
-                <DatePicker SelectedDate="{Binding Birthday}" />
-                <Label Content="Стаж работы"/>
-                <TextBox Text="{Binding Experience}"/>
-                <Label Content="Пол"/>
-                <ComboBox Name ="Пол" Height="20" VerticalAlignment="Top">
+                <Label Content="Имя" Background="Red" FontWeight="Bold"/>
+                <TextBox Text="{Binding FirstName}" Background="ForestGreen"/>
+                <Label Content="Отчество" Background="Red" FontWeight="Bold"/>
+                <TextBox Text="{Binding Patronymic}" Background="ForestGreen"/>
+                <Label Content="Фамилия" Background="Red" FontWeight="Bold"/>
+                <TextBox Text="{Binding LastName}" Background="ForestGreen"/>
+                <Label Content="Номер телефона" Background="Red" FontWeight="Bold"/>
+                <TextBox Text="{Binding Namber}" Background="ForestGreen"/>
+                <Label Content="Дата рождения" Background="Red" FontWeight="Bold"/>
+                <DatePicker SelectedDate="{Binding Birthday}" Background="ForestGreen" />
+                <Label Content="Стаж работы" Background="Red" FontWeight="Bold"/>
+                <TextBox Text="{Binding Experience}" Background="ForestGreen"/>
+                <Label Content="Пол" Background="Red" FontWeight="Bold" />
+                <ComboBox Name ="Пол" Height="20" VerticalAlignment="Top" Background="ForestGreen">
                     <TextBlock>Муж.</TextBlock>
                     <TextBlock>Жен.</TextBlock>
                 </ComboBox>
 
-                <Label Content="Специальность"/>
-                <ComboBox Name ="Специальность" Height="20" VerticalAlignment="Top">
+                <Label Content="Специальность" Background="Red" FontWeight="Bold"/>
+                <ComboBox Name ="Специальность" Height="20" VerticalAlignment="Top" Background="ForestGreen">
                     <TextBlock>Прием писем</TextBlock>
                     <TextBlock>Фабрика игрушек</TextBlock>
                     <TextBlock>Упаковка подарков</TextBlock>
@@ -65,8 +64,8 @@
 
                 </ComboBox>
 
-                <Label Content="Регион"/>
-                <ComboBox Name ="Регион" Height="20" VerticalAlignment="Top">
+                <Label Content="Регион" Background="Red" FontWeight="Bold"/>
+                <ComboBox Name ="Регион" Height="20" VerticalAlignment="Top" Background="ForestGreen">
                     <TextBlock>Северная Америка</TextBlock>
                     <TextBlock>Южная Америка</TextBlock>
                     <TextBlock>Европа</TextBlock>

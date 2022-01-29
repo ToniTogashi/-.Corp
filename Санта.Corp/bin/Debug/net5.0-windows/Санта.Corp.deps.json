@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Санта.Corp/1.0.0": {
+        "runtime": {
+          "Санта.Corp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Санта.Corp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

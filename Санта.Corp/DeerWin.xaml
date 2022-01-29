@@ -17,22 +17,22 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <ListBox ItemsSource="{Binding Deers}" 
+        <ListBox ItemsSource="{Binding Deers}" Background="WhiteSmoke"
                  SelectedItem="{Binding SelectedDeer}"
                  DisplayMemberPath="LastName"
                  ContextMenu="{StaticResource listMenu}"/>
-        <StackPanel Grid.Column="1" DataContext="{Binding SelectedDeer}">
+        <StackPanel Grid.Column="1" DataContext="{Binding SelectedDeer}" Background="ForestGreen">
             <StackPanel 
                 DataContext="{Binding SelectedDeer}"
                 Orientation="Vertical">
                 <Label Content="Номер"/>
-                <TextBox Text="{Binding Number}"/>
+                <TextBox Text="{Binding Number}" Background="Red" FontWeight="Bold"/>
                 <Label Content="Имя"/>
-                <TextBox Text="{Binding Name}"/>
+                <TextBox Text="{Binding Name}" Background="Red" FontWeight="Bold"/>
                 <Label Content="Возраст"/>
-                <TextBox Text="{Binding Age}"/>
+                <TextBox Text="{Binding Age}" Background="Red" FontWeight="Bold"/>
 
-                <Label Content="Регион"/>
+                <Label Content="Регион" />
                 <ComboBox Name ="Регион" Height="20" VerticalAlignment="Top">
                     <TextBlock>Северная Америка</TextBlock>
                     <TextBlock>Южная Америка</TextBlock>

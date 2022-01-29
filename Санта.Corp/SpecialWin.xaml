@@ -17,16 +17,16 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <ListBox ItemsSource="{Binding Specials}" 
+        <ListBox ItemsSource="{Binding Specials}" Background="WhiteSmoke" 
                  SelectedItem="{Binding SelectedSpecial}"
                  DisplayMemberPath="Title"
                  ContextMenu="{StaticResource listMenu}"/>
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" Background ="ForestGreen">
             <StackPanel 
                 DataContext="{Binding SelectedRegion}"
                 Orientation="Vertical">
-                
-                <Label Content="Специальность"/>
+
+                <Label Content="Специальность" Background="Red" FontWeight="Bold"/>
                 <ComboBox Name ="Специальность" Height="20" VerticalAlignment="Top">
                     <TextBlock>Прием писем</TextBlock>
                     <TextBlock>Фабрика игрушек</TextBlock>
@@ -36,16 +36,16 @@
                     
                 </ComboBox>
 
-                <Label Content="Регион"/>
+                <Label Content="Регион" Background="Red" FontWeight="Bold"/>
                 <ComboBox Name ="Регион" Height="20" VerticalAlignment="Top">
                     <TextBlock>Северная Америка</TextBlock>
                     <TextBlock>Южная Америка</TextBlock>
                     <TextBlock>Европа</TextBlock>
                 </ComboBox>
 
-                <Label Content="Телефон"/>
+                <Label Content="Телефон" Background="Red" FontWeight="Bold"/>
                 <TextBox Text="{Binding Special}"/>
-                <Label Content="Адресс глав. филиала"/>
+                <Label Content="Адресс глав. филиала" Background="Red" FontWeight="Bold"/>
                 <TextBox Text="{Binding Special}"/>
             </StackPanel>
         </StackPanel>

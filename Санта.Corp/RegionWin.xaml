@@ -17,30 +17,30 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Row="1" SelectedItem="{Binding SelectedRegion}"
+        <ListBox Grid.Row="1" SelectedItem="{Binding SelectedRegion}"  Background="WhiteSmoke"
                  ItemsSource="{Binding Region}" 
                  DisplayMemberPath="LastName" 
                  ContextMenu="{StaticResource listMenu}"
                  />
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" Background="ForestGreen">
             <StackPanel 
                 DataContext="{Binding SelectedRegion}"
                 Orientation="Vertical">
-                <Label Content="Регион"/>
+                <Label Content="Регион" Background="Red" FontWeight="Bold"/>
                 <ComboBox Name ="Регион" Height="20" VerticalAlignment="Top">
                     <TextBlock>Северная Америка</TextBlock>
                     <TextBlock>Южная Америка</TextBlock>
                     <TextBlock>Европа</TextBlock>
                 </ComboBox>
 
-                <Label Content="Часовой пояс"/>
+                <Label Content="Часовой пояс" Background="Red" FontWeight="Bold"/>
                 <ComboBox Name ="Пл" Height="20" VerticalAlignment="Top">
                     <TextBlock>с UTC −10 по UTC −5</TextBlock>
                     <TextBlock>с UTC −5 по UTC −3</TextBlock>
                     <TextBlock>с UTC 0 по UTC +2</TextBlock>
                 </ComboBox>
-                
-                <Label Content="Олень"/>
+
+                <Label Content="Олень" Background="Red" FontWeight="Bold"/>
                 <TextBox Text="{Binding Deer}"/>
             </StackPanel>
         </StackPanel>
